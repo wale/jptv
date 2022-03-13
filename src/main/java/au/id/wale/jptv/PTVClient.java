@@ -1,5 +1,6 @@
 package au.id.wale.jptv;
 
+import au.id.wale.jptv.api.OutletsApi;
 import au.id.wale.jptv.api.RouteTypesApi;
 
 public class PTVClient {
@@ -19,11 +20,23 @@ public class PTVClient {
 
     /**
      * An API group for the `/v3/route_types` endpoint.
+     * <br>
      * This endpoint lists four route types (trains, trams, v-line trains, buses).
      * @return A {@link RouteTypesApi} object.
      * @author Duale Siad
      */
     public RouteTypesApi getRouteTypesApi() {
         return new RouteTypesApi(this.developerKey, this.developerId);
+    }
+
+    /**
+     * An API group for the `/v3/outlets` endpoint.
+     * <br>
+     * This endpoint returns locations of various myki machines and stores, as well as paper outlets.
+     * @return A {@link OutletsApi} object.
+     * @author Duale Siad
+     */
+    public OutletsApi getOutletsApi() {
+        return new OutletsApi(this.developerKey, this.developerId);
     }
 }

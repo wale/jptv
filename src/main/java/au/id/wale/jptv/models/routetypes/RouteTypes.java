@@ -7,10 +7,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 
 public class RouteTypes extends TimetableBaseResponse {
-    public TimetableStatus status;
+    private TimetableStatus status;
 
     @JsonProperty("route_types")
-    public List<RouteType> routeTypes;
+    private List<RouteType> routeTypes;
 
     @Override
     public TimetableStatus getStatus() {
