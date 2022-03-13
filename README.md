@@ -9,7 +9,7 @@ Other than to test and help develop the library, you cannot use this library at 
 - [ ] Directions
 - [ ] Disruptions
 - [ ] Fare estimates
-- [ ] Outlets
+- [x] Outlets
 - [ ] Patterns
 - [ ] Routes
 - [x] Route types
