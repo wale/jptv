@@ -19,4 +19,7 @@ jobs:
         uses: gradle/gradle-build-action@v2
 
       - name: Execute Gradle Test
+        env:
+          PTV_DEV_ID: ${{secrets.PTV_DEV_ID}}
+          PTV_API_KEY: ${{secrets.PTV_API_KEY}}
         run: ./gradlew test
